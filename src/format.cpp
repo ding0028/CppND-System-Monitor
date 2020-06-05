@@ -11,9 +11,9 @@ using std::string;
 
 std::string Format::ElapsedTime(long seconds) { 
        
-    long ss = seconds % 60;
-    long mm = (seconds / 60) % 60;
-    long hh   = seconds / 3600; 
+    const long ss = seconds % 60;
+    const long mm = (seconds / 60) % 60;
+    const long hh   = seconds / 3600; 
 
     std::stringstream time;
 

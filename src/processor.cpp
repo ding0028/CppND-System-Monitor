@@ -1,7 +1,10 @@
 #include "processor.h"
 #include "linux_parser.h"
 
-
+Processor::Processor() {
+  idleTime = LinuxParser::IdleJiffies();  
+  totalTime = LinuxParser::Jiffies();	
+}
 
 float Processor::Utilization() {
   

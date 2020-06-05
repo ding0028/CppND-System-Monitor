@@ -11,10 +11,5 @@ class Processor {
  float totalTime{0};
 };
 
-Processor::Processor() {
-  idleTime = LinuxParser::IdleJiffies();  
-  totalTime = LinuxParser::Jiffies();
-	
-}
 
 #endif

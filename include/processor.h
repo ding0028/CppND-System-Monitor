@@ -4,9 +4,17 @@
 class Processor {
  public:
   float Utilization();  // TODO: See src/processor.cpp
-
+  Processor();
   // TODO: Declare any necessary private members
  private:
+ float idleTime{0};
+ float totalTime{0};
 };
+
+Processor::Processor() {
+  idleTime = LinuxParser::IdleJiffies();  
+  totalTime = LinuxParser::Jiffies();
+	
+}
 
 #endif

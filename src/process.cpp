@@ -23,7 +23,7 @@ float Process::CpuUtilization() const{
     float utilization = 0.0;
 	float timeDiff = (float)LinuxParser::UpTime(pid_);
 	if (timeDiff > 0)
-      utilization = ((float)LinuxParser::ActiveJiffies(pid_)/sysconf(_SC_CLK_TCK)) /timeDiff );
+      utilization = ((float)LinuxParser::ActiveJiffies(pid_)/sysconf(_SC_CLK_TCK)) /timeDiff ;
     
 	return utilization;
 }
